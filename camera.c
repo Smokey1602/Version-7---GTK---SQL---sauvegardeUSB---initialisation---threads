@@ -939,7 +939,7 @@ void sauvegarde_automatique() //contient aussi la sauvegarde de secours
 	{
 		
 		snprintf(image,sizeof(image),"Sauvegarde/Graphiques/Graphique_du_%s.jpg",DateString);
-		snprintf(image2,sizeof(image),"/var/www/html/Sauvegarde/Graphiques/Graphique_du_%s.jpg",DateString);
+		snprintf(image2,sizeof(image),"/var/www/Sauvegarde/Graphiques/Graphique_du_%s.jpg",DateString);
 		if(fopen(image,"r")==NULL)
 		{
 			Graph = imread("fond_graphique.jpg");
@@ -950,7 +950,7 @@ void sauvegarde_automatique() //contient aussi la sauvegarde de secours
 		}
 		imwrite(image,Graph);
 
-		snprintf(nom,sizeof(nom),"/var/www/html/Sauvegarde/Fichier_csv/%s.csv",DateString);///var/www/html/
+		snprintf(nom,sizeof(nom),"/var/www/Sauvegarde/Fichier_csv/%s.csv",DateString);///var/www/html/
 		snprintf(nom2,sizeof(nom2),"Sauvegarde/Fichier_csv/%s.csv",DateString);//on enregistre avec le fichier
 	
 		file=fopen(nom,"a+");	
